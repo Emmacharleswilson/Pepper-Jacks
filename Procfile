@@ -1,1 +1,1 @@
-web: gunicorn pepper-jacks.wsgi
+web: gunicorn pepper_jacks.wsgi
