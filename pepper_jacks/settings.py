@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'menus',
     'home',
+    'reservations',
 ]
 
 MIDDLEWARE = [
