@@ -5,6 +5,10 @@ from django.views import generic
 from .models import FoodItem, DrinkItem
 
 
+def menus(request):
+    return render(request, 'menus_page.html')
+
+
 class FoodMenu(generic.ListView):
     """
     Render food menus as a list of items from database
