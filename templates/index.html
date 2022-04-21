@@ -4,26 +4,20 @@
 
 {% block content %}
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center" style="padding: 0;">
     <div class="row content mt-1 d-flex justify-content-center">
         <!-- Homepage content -->
-        <div class="col-12 col-sm-8 col-lg-10">
-            <!-- Animated heading to look like it's 'growing' using Animate CSS library -->
-            <h1>Welcome to <span class="brand-text">Pepper Jack's</span></h1>
+        <div class="container">
+            <img src="{% static 'images/hero-image.jpg' %}" class="img-fluid" alt="Steak">
+            <div class="centered">
+                <h1 class="home-text">Welcome to Pepper Jack's</h1>
+            </div>
             <br>
             <!-- 'About us' section -->
-            <p>Ipsum sdhsd</p>
-            <ul class="principles-list green-bground p-3 mb-3">
-                <li class="text-center">blah blah</li>
-                <li class="text-center">baschb</li>
-                <li class="text-center">blah balch</li>
-            </ul>
-            <p></p>
 
         </div>
-        <hr>
         <!-- Menus & Reservation images and page links -->
-        <div class="row content mb-5 d-flex justify-content-center">
+        <div class="row content justify-content-center" style="margin-top: -400px;">
             <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
                 <div>
                     <a href="{% url 'menus' %}">

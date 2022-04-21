@@ -1,142 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Akshar&display=swap');
+
 body {
-    background-color: #F9FAFC;
+    background-color: #FCF6D3;
+}
+
+/* Navbar and Text */
+
+
+.navbar {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding-top: .8rem;
+    padding-bottom: 1rem;
+    background-color: #231502;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    color: #bd1313;
 }
 
-.red-o {
-    color: #E84610;
+.nav-link {
+    color: #bd1313;
+    margin-left: 30px;
 }
 
-.thin {
-    font-weight: 300;
+.navbar-toggler {
+    color: #bd1313;
 }
 
-.light-bg {
-    background-color: #fff;
+.navbar-toggler-icon {
+    color: #bd1313;
 }
 
-.dark-bg {
-    background-color: #445261;
-}
+/* Hero Image */
 
-.main-bg {
-    background-color: #F9FAFC;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
+.container {
     position: relative;
+    text-align: center;
+    color: #ffffff;
 }
 
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
+.img-fluid {
     width: 100%;
+    height: 70%;
 }
 
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
+/* General Styling */
 
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
+.home-text {
+    font-family: "Akshar", sans-serif;
     position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
 }
 
-.post-link {
-    text-decoration: none;
-    color: #445261;
+.brand-text {
+    font-family: "Akshar", sans-serif;
+    padding-top: 40px;
 }
 
-.post-link:hover,
-.page-link {
-    color: #E84610;
+.page-links {
+    margin-top: -400px;
 }
 
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
+/* Footer */
 
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+.footer {
+    background-color: #231502;
 }
