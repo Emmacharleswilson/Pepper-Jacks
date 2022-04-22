@@ -8,7 +8,7 @@
     <div class="row content mt-1 d-flex justify-content-center">
         <!-- Homepage content -->
         <div class="container">
-            <img src="{% static 'images/hero-image.jpg' %}" class="img-fluid" alt="Steak">
+            <img src="{% static 'images/hero-image.webp' %}" class="img-fluid" alt="Steak">
             <div class="centered">
                 <h1 class="home-text">Welcome to Pepper Jack's</h1>
             </div>
@@ -17,11 +17,12 @@
 
         </div>
         <!-- Menus & Reservation images and page links -->
-        <div class="row content justify-content-center" style="margin-top: -400px;">
+        <div class="row content justify-content-center" style="margin-top: -80px; margin-bottom: 60px;">
             <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
                 <div>
                     <a href="{% url 'menus' %}">
                         <h3 class="mt-2 brand-text page-links">Menus</h3>
+                        <img src="{% static 'images/menu.jpg' %}" class="img-thumbnail" alt="A bowl of healthy food.">
                     </a>
                 </div>
             </div>
@@ -29,6 +30,8 @@
                 <div>
                     <a href="{% url 'reservations' %}">
                         <h3 class="mt-2 brand-text page-links">Reservations</h3>
+                        <img src="{% static 'images/reservations.webp' %}" class="img-thumbnail"
+                            alt="A bowl of healthy food.">
                     </a>
                 </div>
             </div>
