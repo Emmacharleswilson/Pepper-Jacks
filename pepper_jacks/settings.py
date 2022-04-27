@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -48,8 +51,13 @@ INSTALLED_APPS = [
     'home',
     'reservations',
     'contact',
-    'website',
 ]
+
+SITE_ID = 1
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,6 +80,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.static',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
