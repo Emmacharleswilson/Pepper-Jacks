@@ -90,8 +90,13 @@ body {
 .brand-text {
     font-family: "Abril Fatface", sans-serif;
     font-size: 35px;
-    margin-top: 150px !important;
+    margin-top: 140px !important;
+    padding-bottom: 10px;
     color: #bd1313;
+}
+
+.img-thumbnail {
+    max-width: 70%;
 }
 
 /* Footer */

@@ -1,6 +1,6 @@
 from django.db import models
 
-FOOD_MENU_SECTION = ((0, "Breakfast/Brunch"), (1, "Dinner"), (2, "New item"))
+FOOD_MENU_SECTION = ((0, "Lunch"), (1, "Dinner"), (2, "Desserts"), (3, "New item"))
 DRINKS_MENU_SECTION = (
     (0, "Hot Drinks"), (1, "Fruit juices/Soft Drinks"),
     (2, "Wine/Beer/Cocktails"), (3, "New item"))

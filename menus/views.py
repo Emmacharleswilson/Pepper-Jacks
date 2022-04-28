@@ -20,10 +20,12 @@ class FoodMenu(generic.ListView):
     def get_queryset(self):
         # Split breakfast and dinner items up to display seperately.
         queryset = {
-            'breakfast_items': FoodItem.objects.all().filter(
+            'lunch_items': FoodItem.objects.all().filter(
                 on_menu=True, food_menu_section=0),
             'dinner_items': FoodItem.objects.all().filter(
-                on_menu=True, food_menu_section=1)
+                on_menu=True, food_menu_section=1),
+            'dessert_items': FoodItem.objects.all().filter(
+                on_menu=True, food_menu_section=2)
         }
         return queryset
 
@@ -41,7 +43,7 @@ class DrinksMenu(generic.ListView):
         queryset = {
             'hotdrinks_items': DrinkItem.objects.all().filter(
                 on_menu=True, drinks_menu_section=0),
-            'fruitjuices_smoothies_items': DrinkItem.objects.all().filter(
+            'softdrinks_items': DrinkItem.objects.all().filter(
                 on_menu=True, drinks_menu_section=1),
             'alcohol_items': DrinkItem.objects.all().filter(
                 on_menu=True, drinks_menu_section=2)

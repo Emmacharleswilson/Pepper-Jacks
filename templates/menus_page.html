@@ -9,17 +9,18 @@
             <br>
         </div>
     </div>
-    <hr>
     <!-- Food & Drinks menus images and page links -->
-    <div class="row content mb-5 d-flex justify-content-center">
-        <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
+    <div class="row content mb-5 d-flex justify-content-center" style="margin-top: -100px;">
+        <div class="col-sm-6 col-lg-3 text-center">
             <a href="{% url 'food_menu' %}">
-                <h3 class="mt-2 brand-text page-links">Food</h3>
+                <h3 class="mt-3 brand-text page-links">Food</h3>
+                <img src="{% static 'images/beef.jpg' %}" class="img-thumbnail" alt="A bowl of healthy food.">
             </a>
         </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
+        <div class="col-sm-6 col-lg-3 text-center">
             <a href="{% url 'drinks_menu' %}">
-                <h3 class="mt-2 brand-text page-links">Drinks</h3>
+                <h3 class="mt-3 brand-text page-links">Drinks</h3>
+                <img src="{% static 'images/drinks.jpg' %}" class="img-thumbnail" alt="A bowl of healthy food.">
             </a>
         </div>
 
