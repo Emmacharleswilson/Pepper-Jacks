@@ -95,6 +95,17 @@ body {
     color: #bd1313;
 }
 
+.brand-text-menu {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 25px;
+    margin-top: 140px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ece4b5;
+    color: #bd1313;
+}
+
+
 .img-thumbnail {
     max-width: 70%;
 }
