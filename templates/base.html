@@ -22,44 +22,80 @@
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Pepper Jack's</span></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'menus' %}">Menus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'reservations' %}">Reservations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <ul class="ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <a class="navbar-brand" href="{% url 'home' %}" id="brand">Pepper Jack's</a>
+        <!-- Collapsible icon for smaller screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item light-text green-bground">
+                    <!-- Display different style if link is active -->
+                    <a class="nav-link {% if request.resolver_match.url_name == 'home' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown green-bground">
+                    <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'menus' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'menus' %}" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menus
+                    </a>
+                    <!-- Dropdown for the different menus options -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item {% if request.resolver_match.url_name == 'food_menu' %}
+                             {% endif %}" href="{% url 'food_menu' %}">Food</a>
                         </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <li><a class="dropdown-item  {% if request.resolver_match.url_name == 'drinks_menu' %}
+                           {% endif %}" href="{% url 'drinks_menu' %}">Drinks</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                        </li>
-                        {% endif %}
+                        <li>
                     </ul>
-                </ul>
-            </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'reservations' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'reservations' %}">Reservations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'contact' %}">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                {% if user.is_authenticated %}
+                <!-- Display manage reservations, edit customer details & logout option if user is logged in -->
+                <li class="nav-item green-bground ml-auto">
+                    <a class="nav-link" href="#">Manage
+                        Reservations</a>
+                </li>
+                <li class="nav-item green-bground ml-auto">
+                    <a class="nav-link" href="#">Update
+                        Details</a>
+                </li>
+                <li class="nav-item green-bground ml-auto">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'account_logout' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                <!-- If user is not logged in display Register & Login -->
+                {% else %}
+                <li class="nav-item green-bground ml-auto">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'account_signup' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item green-bground ml-auto">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'account_login' %}
+                    green-text {% else %} text-white {% endif %}" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
         </div>
+
     </nav>
+
+
+
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
