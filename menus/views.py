@@ -24,7 +24,7 @@ class FoodMenu(generic.ListView):
                 on_menu=True, food_menu_section=0),
             'dinner_items': FoodItem.objects.all().filter(
                 on_menu=True, food_menu_section=1),
-            'dessert_items': FoodItem.objects.all().filter(
+            'desserts_items': FoodItem.objects.all().filter(
                 on_menu=True, food_menu_section=2)
         }
         return queryset
@@ -43,7 +43,7 @@ class DrinksMenu(generic.ListView):
         queryset = {
             'hotdrinks_items': DrinkItem.objects.all().filter(
                 on_menu=True, drinks_menu_section=0),
-            'softdrinks_items': DrinkItem.objects.all().filter(
+            'fruitjuices_softdrinks_items': DrinkItem.objects.all().filter(
                 on_menu=True, drinks_menu_section=1),
             'alcohol_items': DrinkItem.objects.all().filter(
                 on_menu=True, drinks_menu_section=2)

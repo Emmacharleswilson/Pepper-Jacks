@@ -17,7 +17,7 @@ class FoodItem(models.Model):
     price = models.FloatField()
     allergens = models.CharField(max_length=200, null=True)
     food_menu_section = models.IntegerField(
-        choices=FOOD_MENU_SECTION, default=2)
+        choices=FOOD_MENU_SECTION, default=3)
     on_menu = models.BooleanField(default=False)
     updated_on = models.DateTimeField(auto_now=True)
 
