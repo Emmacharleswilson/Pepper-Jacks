@@ -30,21 +30,21 @@ This website will offer all of these things whilst also allowing for intuitive n
 Please find all my defined user stories & their acceptance criteria [here]()
 
 1. As a user I can navigate through the site so that I can view the desired content
-2. As a user I can get key information about the restaurant from the landing page so that I can spend less time having to search for information.
-3. As an admin user I can log in so that I can access the site's backend.
-4. As an admin user I can approve or reject any reservation requests so that I can manage the restaurant's bookings efficiently.
-5. As an admin user I can sign in to add & remove items from the current menus so that I can make sure the website is up to date and accurately reflects what is being served in the restaurant.
-6. As an admin user I can create, remove, update or delete food & drinks items from the database so that I can ensure items are accurate and able to be added to the menu on the website.
-7. As a user I can register or log in so that I can manage my booking requests.
-8. As a user I can easily see if I'm logged in or not so that I can choose to log in or log out depending on what I'm doing.
-9. As a user I am prompted to register for an account so that I can create an account and receive the benefits from having a profile.
-10. As a user I can log in so that I can auto-populate forms with my information on the site.
-11. As a user I can view the food & drinks menu's separately so that I can easily find the information I'm looking for.
-12. As a user I can easily find all of the relevant information about the menu items so that I can make informed decisions.
-13. As a user I can submit a reservation request so that I can visit the restaurant.
-14. As an admin user I can prevent guests from submitting reservation requests for full slots so that I can efficiently manage customer expectations and prevent a backlog of bookings.
-15. As a user I can find a navigation bar and footer so that I can see what content there is on the website.
-16. As a user I can send a contact form to the restaurant so that I can receive additional information.
+2. As an admin user I can log in so that I can access the site's backend
+3. As an admin user I can approve or reject any reservation requests so that I can manage the restaurant's bookings effectively
+4. As an admin user I can sign in to add and remove items from the current menus so that I can make sure the menus are up to date
+5. As an admin user I can create, remove, update or delete food & drinks items from the database capability so that I can ensure items are accurate and able to be added to the menu on the website
+6. As a user I can register or login so that I can manage my bookings
+7. As a user I can easily see if I'm logged in or not so that I can choose to log in or log out
+8. As a user I can be prompted to register for an account so that I can create an account and receive the benefits of having a profile
+9. As a user I can log in so that I can auto-populate forms with my information on the site
+10. As a user I can view the food and drinks menus so that I can view the current food and drinks
+11. As a user I can submit a reservation request so that I can make a booking and visit the restaurant
+12. As an admin user I can prevents guests from submitting reservation requests for full slots so that I can effectively manage customer expectations and prevent double bookings
+13. As a user I can find a navigation bar and footer so that I can easily navigate through the website
+14. As a user I can send a contact form to the restaurant so that I can receive additional information
+15. As a logged-in customer I can edit/delete an existing enquiry so that I can make changes to my booking
+16. As a user I can edit my customer information so that I can make sure my details are up to date
 17. As a logged-in customer I can edit/delete an existing enquiry so that I can make changes if required online.
 18. As a user I can edit my customer information so that I can make sure my details are up to date for any future communication with the restaurant.
 
