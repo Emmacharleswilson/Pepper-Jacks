@@ -45,8 +45,6 @@ Please find all my defined user stories & their acceptance criteria [here]()
 14. As a user I can send a contact form to the restaurant so that I can receive additional information
 15. As a logged-in customer I can edit/delete an existing enquiry so that I can make changes to my booking
 16. As a user I can edit my customer information so that I can make sure my details are up to date
-17. As a logged-in customer I can edit/delete an existing enquiry so that I can make changes if required online.
-18. As a user I can edit my customer information so that I can make sure my details are up to date for any future communication with the restaurant.
 
 ## Scope
 In order to achieve the desired user & business goals, the following features will be included in this release:
