@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
 <div class="container-fluid">
     <div class="row d-flex justify-content-center">
         <div class="col-sm-8">
@@ -15,7 +16,12 @@
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-xs-10 col-sm-6 col-md-8 col-lg-6 col-xl-5">
-            <!-- Display both forms together -->
+            <!-- Contact form -->
+            <form method="post" class="reservations-form full-form mb-5">
+                {% csrf_token %}
+                {{customer_form|crispy}}
+                <button type="submit">Send</button>
+            </form>
 
         </div>
     </div>
