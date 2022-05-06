@@ -14,7 +14,7 @@ class CustomerForm(forms.ModelForm):
 
 
 class ReservationForm(forms.ModelForm):
-    requested_date = forms.DateField()
+    requested_date = forms.DateField(input_formats=settings.DATE_INPUT_FORMAT)
 
     class Meta:
         model = Reservation
