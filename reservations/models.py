@@ -38,16 +38,9 @@ class Item(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
     done = models.BooleanField(null=False, blank=False, default=False)
 
-
-class Kysha(models.Model):
-    name = models.CharField(max_length=50, null=False, blank=False)
-    done = models.BooleanField(null=False, blank=False, default=False)
-
-
-class Test(models.Model):
-    test_id = models.AutoField(primary_key=True)
-    full_name = models.CharField(max_length=50, null=False, blank=False)
-    full_done = models.BooleanField(null=False, blank=False, default=False)
+    def __str__(self):
+        # return the full name as this is easier for the admin to read
+        return self.name
 
 
 class Customer(models.Model):
@@ -84,4 +77,3 @@ class Reservation(models.Model):
 
     def __str__(self):
         return str(self.reservation_id)
-

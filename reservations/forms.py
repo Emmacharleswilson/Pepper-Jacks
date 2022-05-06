@@ -1,10 +1,21 @@
-from .models import Customer, Items, Kysha
 from django import forms
+from django.conf import settings
+from phonenumber_field.formfields import PhoneNumberField
+from .models import Customer, Reservation
 
 
 class CustomerForm(forms.ModelForm):
-    full_name = forms.CharField(max_length=50)
+    phone_number = PhoneNumberField(widget=forms.TextInput(
+        attrs={'placeholder': ('Please enter in +44 format')}))
 
     class Meta:
         model = Customer
-        fields = ('full_name',)
+        fields = ('full_name', 'email', 'phone_number')
+
+
+class ReservationForm(forms.ModelForm):
+    requested_date = forms.DateField()
+
+    class Meta:
+        model = Reservation
+        fields = ('no_of_guests', 'requested_date', 'requested_time')

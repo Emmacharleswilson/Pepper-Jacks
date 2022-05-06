@@ -16,11 +16,19 @@
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-xs-10 col-sm-6 col-md-8 col-lg-6 col-xl-5">
-            <!-- Contact form -->
-            <form method="post" class="reservations-form full-form mb-5">
+            <form method="POST" class="mb-5 reservation-enquiry full-form">
+
                 {% csrf_token %}
-                {{customer_form|crispy}}
-                <button type="submit">Send</button>
+
+                <!-- Customer form -->
+                {{ customer_form | crispy }}
+
+                <!-- Reservation form -->
+                {{ reservation_form | crispy }}
+
+                <button type="submit" class="button mt-4 text-center submit-button">Send
+                    enquiry</button>
+
             </form>
 
         </div>
