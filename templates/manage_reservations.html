@@ -53,7 +53,8 @@
                             <div class="text-center">
                                 <a href="{% url 'edit_reservation' reservation.reservation_id %}"
                                     class="button submit-button inline-btn">Edit Reservation</a>
-                                <a href="{#}" class="button cancel-button inline-btn">Cancel Reservation</a>
+                                <a href="{% url 'delete_reservation' reservation.reservation_id %}"
+                                    class="button cancel-button inline-btn">Cancel Reservation</a>
                             </div>
                             {% endif %}
                             <hr>

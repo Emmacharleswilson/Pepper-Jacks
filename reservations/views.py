@@ -320,6 +320,140 @@ class EditReservation(View):
                        'customer': customer, })
 
 
+class DeleteReservation(View):
+    """ View for user to delete reservations """
+    def get(self, request, reservation_id, User=User, *args, **kwargs):
+        if request.user.is_authenticated:
+            reservation = get_object_or_404(
+                Reservation, reservation_id=reservation_id)
+            customer = get_customer_instance(request, User)
+            # Prevent customers editing expired reservations
+            today = datetime.datetime.now().date()
+            if reservation.requested_date < today:
+                messages.add_message(
+                    request, messages.ERROR, "You are trying to edit a "
+                    "reservation that is in the past.")
+                url = reverse('manage_reservations')
+                return HttpResponseRedirect(url)
+            else:
+                # Compare names of reservation owner and user
+                reservation_owner = reservation.customer
+                name_of_user = customer
+
+                if reservation_owner != name_of_user:
+                    # If the names do not match redirect to manage reservations
+                    messages.add_message(request, messages.ERROR,
+                                         "You are trying to cancel a "
+                                         "reservation that is not yours.")
+                    url = reverse('manage_reservations')
+                    return HttpResponseRedirect(url)
+
+                else:
+                    return render(request, 'delete_reservation.html',
+                                  {'customer': customer,
+                                   'reservation': reservation,
+                                   'reservation_id': reservation_id})
+        else:
+            # Prevent users not logged in from accessing this page
+            messages.add_message(
+                request, messages.ERROR, "You must be logged in to "
+                "manage your reservations.")
+
+            url = reverse('reservations')
+            return HttpResponseRedirect(url)
+
+    def post(self, request, reservation_id, User=User, *args, **kwargs):
+        # get reservation from database
+        reservation_id = reservation_id
+        reservation = Reservation.objects.get(pk=reservation_id)
+        # Delete the reservation
+        reservation.delete()
+        messages.add_message(request, messages.SUCCESS,
+                             f"Reservation {reservation_id} has now "
+                             "been cancelled.")
+        # Get updated list of reservations
+        current_reservations = retrieve_reservations(self, request, User)
+        # Return user to manage reservations page
+        validate_date(self, request, current_reservations)
+        return render(request, 'manage_reservations.html',
+                      {'reservations': current_reservations})
+
+
+class EditCustomerDetails(View):
+    """ View for user to be able to edit their information """
+    def get(self, request, User=User, *args, **kwargs):
+        if request.user.is_authenticated:
+            # Get customer object based on user
+            customer = get_customer_instance(request, User)
+            if customer is None:
+                # If 'customer' does not exist return user email
+                email = request.user.email
+                customer_form = CustomerForm(initial={"email": email})
+            else:
+                # return both forms with the existing information
+                customer_form = CustomerForm(instance=customer)
+
+            return render(request, 'edit_customer_details.html',
+                          {'customer_form': customer_form,
+                           'customer': customer, })
+
+        else:
+            # If user not logged in redirect to reservations page
+            messages.add_message(request, messages.ERROR,
+                                 "You must be logged in to update your "
+                                 "details.")
+
+            url = reverse('reservations')
+            return HttpResponseRedirect(url)
+
+    def post(self, request, User=User, *args, **kwargs):
+        customer = get_customer_instance(request, User)
+        customer_form = CustomerForm(data=request.POST, instance=customer)
+
+        # Prevent duplicate 'customers' being added to database
+        if customer_form.is_valid():
+            if customer is None:
+                customer_form.save()
+                messages.add_message(request, messages.SUCCESS,
+                                     "Your details have now been added.")
+            else:
+                if customer_form.has_changed():
+                    # get the information from the form
+                    customer_full_name = request.POST.get('full_name')
+                    customer_phone_number = request.POST.get('phone_number')
+
+                    customer_form.save(commit=False)
+                    # Update customer instance with new information
+                    customer.full_name = customer_full_name
+                    customer.phone_number = customer_phone_number
+                    customer_form.save()
+                    messages.add_message(request, messages.SUCCESS,
+                                         "Your details have now been updated.")
+
+                    return render(request, 'edit_customer_details.html',
+                                  {'customer_form': customer_form,
+                                   'customer': customer, })
+
+                else:
+                    # If no information has changed
+                    messages.add_message(request, messages.WARNING,
+                                         "No information has changed.")
+                    return render(request, 'edit_customer_details.html',
+                                  {'customer_form': customer_form,
+                                   'customer': customer, })
+
+        else:
+            messages.add_message(
+                request, messages.ERROR,
+                "Something is not right with your form "
+                "please make sure your email address & phone number "
+                "are entered in the correct format.")
+
+        return render(request, 'edit_customer_details.html',
+                      {'customer_form': customer_form,
+                       'customer': customer, })
+
+
 """
 def reservations(request):
     items = Item.objects.all()
