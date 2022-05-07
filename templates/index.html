@@ -11,49 +11,58 @@
             <img src="{% static 'images/hero-image.webp' %}" class="img-fluid" alt="Steak">
             <br>
             <!-- 'About us' section -->
-            <div class="centered">
-                <h1 class="about-us">Welcome to Pepper Jack's</h1>
-            </div>
-            <div class="text-center mt-2 mb-5">
-                <p class="about-text">
-                    Without returns-on-investment, you will lack branding. The client-focused, killer models factor can
-                    be
-                    summed up in one word: impactful. If all of this comes off as perplexing to you, that's because it
-                    is!
-                    The communities factor is open-source. Without well-chosen micro-micro-macro-nano-C2C2C e-markets,
-                    niches are forced to become robust. Is it more important for something to be wireless or to be
-                    co-branded? If all of this comes off as unimagined to you, that's because it is! We apply the
-                    proverb
-                    "Make hay while the sun shines" not only to our research and development but our power to embrace.
-                    We
-                    believe we know that if you iterate virtually then you may also syndicate interactively. Your budget
-                    for
-                    deploying should be at least one-half of your budget for productizing.
-                </p>
-            </div>
-
-        </div>
-        <!-- Menus & Reservation images and page links -->
-        <div class="row content justify-content-center" style="margin-top: -80px; margin-bottom: 60px;">
-            <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
-                <div>
-                    <a href="{% url 'menus' %}">
-                        <h3 class="mt-2 brand-text page-links">Menus</h3>
-                        <img src="{% static 'images/menu.jpg' %}" class="img-thumbnail" alt="A bowl of healthy food.">
-                    </a>
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-8">
+                        <h2 class="text-center mt-2 mb-3 about-main">Welcome to Pepper Jack's</span>
+                        </h2>
+                        <p class="text-center mb-5 about-text">Without returns-on-investment, you will lack branding.
+                            The
+                            client-focused, killer models factor can
+                            be
+                            summed up in one word: impactful. If all of this comes off as perplexing to you, that's
+                            because it
+                            is!
+                            The communities factor is open-source. Without well-chosen micro-micro-macro-nano-C2C2C
+                            e-markets,
+                            niches are forced to become robust. Is it more important for something to be wireless or to
+                            be
+                            co-branded? If all of this comes off as unimagined to you, that's because it is! We apply
+                            the
+                            proverb
+                            "Make hay while the sun shines" not only to our research and development but our power to
+                            embrace.
+                            We
+                            believe we know that if you iterate virtually then you may also syndicate interactively.
+                            Your budget
+                            for
+                            deploying should be at least one-half of your budget for productizing.</p>
+                    </div>
                 </div>
+
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
-                <div>
-                    <a href="{% url 'reservations' %}">
-                        <h3 class="mt-2 brand-text page-links">Reservations</h3>
-                        <img src="{% static 'images/reservations.webp' %}" class="img-thumbnail"
-                            alt="A bowl of healthy food.">
-                    </a>
+            <!-- Menus & Reservation images and page links -->
+            <div class="row content justify-content-center" style="margin-top: -80px; margin-bottom: 60px;">
+                <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
+                    <div>
+                        <a href="{% url 'menus' %}">
+                            <h3 class="mt-2 brand-text page-links">Menus</h3>
+                            <img src="{% static 'images/menu.jpg' %}" class="img-thumbnail"
+                                alt="A bowl of healthy food.">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
+                    <div>
+                        <a href="{% url 'reservations' %}">
+                            <h3 class="mt-2 brand-text page-links">Reservations</h3>
+                            <img src="{% static 'images/reservations.webp' %}" class="img-thumbnail"
+                                alt="A bowl of healthy food.">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-{% endblock %}
+    {% endblock %}

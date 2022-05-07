@@ -35,11 +35,11 @@
                 <li class="nav-item light-text">
                     <!-- Display different style if link is active -->
                     <a class="nav-link {% if request.resolver_match.url_name == 'home' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'home' %}">Home</a>
+                    red-text {% else %} text-white {% endif %}" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'menus' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'menus' %}" id="navbarDropdown"
+                    red-text {% else %} text-white {% endif %}" href="{% url 'menus' %}" id="navbarDropdown"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Menus
                     </a>
@@ -56,37 +56,39 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'reservations' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'reservations' %}">Reservations</a>
+                    red-text {% else %} text-white {% endif %}" href="{% url 'reservations' %}">Reservations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'contact' %}">Contact Us</a>
+                    red-text {% else %} text-white {% endif %}" href="{% url 'contact' %}">Contact Us</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                 <!-- Display manage reservations, edit customer details & logout option if user is logged in -->
                 <li class="nav-item ml-auto">
-                    <a class="nav-link" href="{% url 'manage_reservations' %}">Manage
+                    <a class="nav-link {% if request.resolver_match.url_name == 'manage_reservations' %}
+                    red-text {% else %} text-white {% endif %}" href="{% url 'manage_reservations' %}">Manage
                         Reservations</a>
                 </li>
                 <li class="nav-item ml-auto">
-                    <a class="nav-link" href="{% url 'edit_customer_details' %}">Update
+                    <a class="nav-link {% if request.resolver_match.url_name == 'edit_customer_details' %}
+                    red-text {% else %} text-white {% endif %}" href="{% url 'edit_customer_details' %}">Update
                         Details</a>
                 </li>
                 <li class="nav-item ml-auto">
                     <a class="nav-link {% if request.resolver_match.url_name == 'account_logout' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                    red-text {% else %} text-white {% endif %}" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 <!-- If user is not logged in display Register & Login -->
                 {% else %}
                 <li class="nav-item ml-auto">
                     <a class="nav-link {% if request.resolver_match.url_name == 'account_signup' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'account_signup' %}">Register</a>
+                    red-text {% else %} text-white {% endif %}" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item ml-auto">
                     <a class="nav-link {% if request.resolver_match.url_name == 'account_login' %}
-                    green-text {% else %} text-white {% endif %}" href="{% url 'account_login' %}">Login</a>
+                    red-text {% else %} text-white {% endif %}" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>
