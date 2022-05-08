@@ -130,6 +130,10 @@ a:hover {
     --bs-gutter-x: 0 !important;
 }
 
+.page-links {
+    text-decoration: none !important;
+}
+
 /* Crispy form inputs */
 
 input#id_name.textinput.textInput,
@@ -149,7 +153,12 @@ input#id_email_address.emailinput {
 
 /* Contact Form */
 
-input
+.contact-form {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
 /* Footer */
 
 .main-bg {
@@ -160,11 +169,23 @@ input
 .footer {
     background-color: #231502;
     opacity: 1;
-    margin-top: 30px;
+}
+
+.footer-light {
+    height: 90px;
 }
 
 .sticky-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.btn-link {
+    color: #920606 !important;
+    margin-bottom: -55px !important;
+}
+
+.copyright {
+    color: #273800 !important;
 }
