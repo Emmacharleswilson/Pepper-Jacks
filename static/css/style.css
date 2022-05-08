@@ -87,9 +87,16 @@ a:hover {
 
 .about-text {
     font-family: "Akshar", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
-    padding-top: 20px;
+    color: #273800;
+}
+
+.about-text-big {
+    font-family: "Akshar", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: #273800;
 }
 
@@ -103,7 +110,7 @@ a:hover {
 
 .brand-text-menu {
     font-family: "Abril Fatface", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 140px !important;
     padding-top: 10px;
     padding-bottom: 10px;

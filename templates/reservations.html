@@ -8,15 +8,17 @@
         <div class="col-sm-8">
             <h2 class="text-center mt-2 mb-3 brand-text">Reservations at Pepper Jack's</span>
             </h2>
-            <h5 class="text-center mt-2 mb-3">We do reserve a small number of tables for walk-ins but reservations are
+            <h5 class="text-center mt-2 mb-3 about-text-big">We do reserve a small number of tables for walk-ins but
+                reservations are
                 recommended</h5>
-            <p class="text-center mb-5">If you would like to book for a party larger than 6, please contact the
+            <p class=" text-center mb-5 about-text">If you would like to book for a party larger than 6, please contact
+                the
                 restaurant directly. Thank you!</p>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-xs-10 col-sm-6 col-md-8 col-lg-6 col-xl-5">
-            <form method="POST" class="mb-5 reservation-enquiry full-form">
+            <form method="POST" class="mb-5 reservation-enquiry full-form about-text">
 
                 {% csrf_token %}
 
@@ -26,7 +28,7 @@
                 <!-- Reservation form -->
                 {{ reservation_form | crispy }}
 
-                <button type="submit" class="button mt-4 text-center submit-button">Send
+                <button type="submit" class="button mt-4 text-center submit-button about-text">Send
                     enquiry</button>
 
             </form>

@@ -7,7 +7,7 @@
         <div class="col-sm-8">
             <h2 class="text-center my-2 brand-text">Drinks at Pepper Jack's</span></h2>
             <!-- Dietary key -->
-            <p class="text-center mb-3">V - Veggie | VE - Vegan</p>
+            <p class="text-center mb-3 about-text">V - Veggie | VE - Vegan</p>
         </div>
     </div>
 
@@ -18,16 +18,17 @@
             {% if drinks_items.hotdrinks_items %}
             {% for drinkitem in drinks_items.hotdrinks_items %}
 
-            <h5> {{ drinkitem.drink_name }} </h5>
+            <h5 class="about-text-big"> {{ drinkitem.drink_name }} </h5>
             <!-- Display price with 2 decimal spaces -->
-            <p> <em>{{ drinkitem.description }}</em> | <strong>£{{ drinkitem.price|floatformat:2 }}</strong></p>
-            <p> {{ drinkitem.dietary }} | Allergens: {{ drinkitem.allergens }}</p>
+            <p class="about-text"> <em>{{ drinkitem.description }}</em> |
+                <strong>£{{ drinkitem.price|floatformat:2 }}</strong></p>
+            <p class="about-text"> {{ drinkitem.dietary }} | Allergens: {{ drinkitem.allergens }}</p>
 
             {% endfor %}
 
             {% else%}
             <!-- If no items found display this placeholder -->
-            <p>Menu being updated - please come back soon!</p>
+            <p class="about-text">Menu being updated - please come back soon!</p>
 
             {% endif %}
 
@@ -38,16 +39,17 @@
             {% if drinks_items.fruitjuices_softdrinks_items %}
             {% for drinkitem in drinks_items.fruitjuices_softdrinks_items %}
 
-            <h5> {{ drinkitem.drink_name }} </h5>
+            <h5 class="about-text-big"> {{ drinkitem.drink_name }} </h5>
             <!-- Display price with 2 decimal spaces -->
-            <p> <em>{{ drinkitem.description }}</em> | <strong>£{{ drinkitem.price|floatformat:2 }}</strong></p>
-            <p> {{ drinkitem.dietary }} | Allergens: {{ drinkitem.allergens }}</p>
+            <p class="about-text"> <em>{{ drinkitem.description }}</em> |
+                <strong>£{{ drinkitem.price|floatformat:2 }}</strong></p>
+            <p class="about-text"> {{ drinkitem.dietary }} | Allergens: {{ drinkitem.allergens }}</p>
 
             {% endfor %}
 
             {% else%}
             <!-- If no items found display this placeholder -->
-            <p>Menu being updated - please come back soon!</p>
+            <p class="about-text">Menu being updated - please come back soon!</p>
             {% endif %}
 
             <hr>
@@ -57,16 +59,17 @@
             {% if drinks_items.alcohol_items %}
             {% for drinkitem in drinks_items.alcohol_items %}
 
-            <h5> {{ drinkitem.drink_name }} </h5>
+            <h5 class="about-text-big"> {{ drinkitem.drink_name }} </h5>
             <!-- Display price with 2 decimal spaces -->
-            <p> <em> {{ drinkitem.description }}</em> | <strong>£{{ drinkitem.price|floatformat:2 }}</strong></p>
-            <p> {{ drinkitem.dietary }} | Allergens: {{ drinkitem.allergens }}</p>
+            <p class="about-text"> <em> {{ drinkitem.description }}</em> |
+                <strong>£{{ drinkitem.price|floatformat:2 }}</strong></p>
+            <p class="about-text"> {{ drinkitem.dietary }} | Allergens: {{ drinkitem.allergens }}</p>
 
             {% endfor %}
 
             {% else%}
             <!-- If no items found display this placeholder -->
-            <p>Menu being updated - please come back soon!</p>
+            <p class="about-text">Menu being updated - please come back soon!</p>
 
             {% endif %}
 
