@@ -30,7 +30,9 @@ time_choices = (
 guests_choices = ((1, "1 person"),
                   (2, "2 people"),
                   (3, "3 people"),
-                  (4, "4 people"))
+                  (4, "4 people"),
+                  (5, "5 people"),
+                  (6, "6 people"),)
 
 
 # Create your models here
