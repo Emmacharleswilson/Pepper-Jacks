@@ -39,11 +39,9 @@ body {
 }
 
 .navbar-toggler {
-    color: #bd1313;
-}
-
-.navbar-toggler-icon {
-    color: #bd1313;
+    color: #231502;
+    border: transparent;
+    padding: .2rem .1rem .23rem .1rem;
 }
 
 .dropdown-item {
@@ -55,6 +53,10 @@ body {
 a:hover {
     background-color: #231502;
     color: #4f7000 !important;
+}
+
+.img.toggle {
+    color: #bd1313 !important;
 }
 
 /* Hero Image */
