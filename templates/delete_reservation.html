@@ -26,34 +26,8 @@
                 <li class="reservation-item">Time: {{ reservation.requested_time }} </li>
                 <li class="reservation-item">Date: {{ reservation.requested_date|date:"d/m/Y" }} </li>
 
-                <!-- Button to open modal -->
-                <button type="button" data-toggle="modal" data-target="#confirmationModal" href="#confirmationModal"
-                    class="button mt-4 text-center cancel-button" id="delete-reservation">Cancel
+                <button type="submit" class="button mt-4 text-center submit-button">Cancel
                     Reservation</button>
-
-                <!-- Modal https://getbootstrap.com/docs/4.0/components/modal/ -->
-                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog"
-                    aria-labelledby="confirmationModal" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Are you sure?</h5>
-                                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true"><i class="far fa-times-circle"></i></span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to cancel this
-                                reservation? <br>This CANNOT be undone!
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary close" data-dismiss="modal">Nope, changed
-                                    my mind!</button>
-                                <button type="submit" class="btn btn-danger">Cancel it.</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </form>
         </div>
     </div>

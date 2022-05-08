@@ -295,7 +295,7 @@ class EditReservation(View):
                 reservation.status = 'pending'
                 reservation_form.save(commit=False)
                 reservation_form.save()
-                messages.add_message(request, messages.SUCCESS,
+                messages.info(request,
                                      f"Reservation {reservation_id} has now"
                                      " been updated.")
                 # Retreive new list of reservations to display
@@ -331,7 +331,7 @@ class DeleteReservation(View):
             today = datetime.datetime.now().date()
             if reservation.requested_date < today:
                 messages.add_message(
-                    request, messages.ERROR, "You are trying to edit a "
+                    request, messages.ERROR, "You are trying to cancel a "
                     "reservation that is in the past.")
                 url = reverse('manage_reservations')
                 return HttpResponseRedirect(url)

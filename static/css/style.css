@@ -118,6 +118,18 @@ a:hover {
     color: #4f7000;
 }
 
+.alert {
+    margin-top: 100px;
+    margin-bottom: -100px;
+    text-align: center;
+    background-color: #6d9c00;
+    color: white;
+}
+
+.row {
+    --bs-gutter-x: 0 !important;
+}
+
 /* Crispy form inputs */
 
 input#id_name.textinput.textInput,
@@ -127,13 +139,23 @@ input#id_full_name.textinput.textInput,
 input#id_phone_number.textinput.textInput,
 select#id_no_of_guests,
 select#id_requested_time,
-input#id_requested_date {
+input#id_requested_date,
+input#id_first_name.textinput.textInput,
+input#id_last_name.textinput.textInput,
+input#id_email_address.emailinput {
     width: 100%;
     margin-bottom: 10px;
 }
 
+/* Contact Form */
 
+input
 /* Footer */
+
+.main-bg {
+    height: calc(100vh - 142px);
+    overflow: scroll;
+}
 
 .footer {
     background-color: #231502;
@@ -142,6 +164,7 @@ input#id_requested_date {
 }
 
 .sticky-footer {
-    position: sticky;
-    top: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
