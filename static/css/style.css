@@ -155,9 +155,15 @@ select#id_requested_time,
 input#id_requested_date,
 input#id_first_name.textinput.textInput,
 input#id_last_name.textinput.textInput,
-input#id_email_address.emailinput {
+input#id_email_address.emailinput,
+input#id_password,
+input#id_login,
+input#id_email,
+input#id_email2,
+input#id_username,
+input#id_password1,
+input#id_password2 {
     width: 100%;
-    margin-bottom: 10px;
 }
 
 /* Contact Form */
