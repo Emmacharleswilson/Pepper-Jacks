@@ -162,7 +162,7 @@ class ManageReservations(View):
             current_reservations = retrieve_reservations(self, request, User)
 
             if current_reservations is None:
-                message.add_message(
+                messages.add_message(
                     request, messages.WARNING,
                     "You've not got any existing "
                     "reservations. You can make reservations here.")
