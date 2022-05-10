@@ -177,7 +177,6 @@ input#id_password2 {
 /* Footer */
 
 .main-bg {
-    height: calc(100vh - 142px);
     overflow: scroll;
 }
 
@@ -190,11 +189,11 @@ input#id_password2 {
     height: 90px;
 }
 
-.sticky-footer {
+/* .sticky-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
+} */
 
 .btn-link {
     color: #920606 !important;
@@ -203,4 +202,8 @@ input#id_password2 {
 
 .copyright {
     color: #273800 !important;
+}
+
+.content-wrapper {
+    min-height: 85vh;
 }
