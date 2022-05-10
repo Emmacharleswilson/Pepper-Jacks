@@ -176,9 +176,24 @@ input#id_password2 {
 
 /* Footer */
 
+.main-bg {
+    height: calc(100vh - 142px);
+    overflow: scroll;
+}
+
 .footer {
-    height: 100px;
-    clear: both;
+    background-color: #231502;
+    opacity: 1;
+}
+
+.footer-light {
+    height: 90px;
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .btn-link {
