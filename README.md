@@ -4,7 +4,7 @@
 
 [Live application can be found here]()
 
-This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. This is a restaurant website designed to display menus to customers & allow them to make/edit/delete reservations. This project has been built for educational purposes.
+This is a full-stack framework project built using Django, Python, HTML, and CSS. This is a restaurant website designed to display menus to customers & allow them to make/edit/delete reservations. This project has been built for educational purposes.
 
 ---
 ## UX
@@ -63,9 +63,10 @@ This website has been designed with simplicity in mind, each page only has key i
 
 The website is made of three apps:
 
-1. Website - core functionality
+1. Home - home display and fucntionality
 2. Menus - menu display
-3. Reservations - reservations enquiries & customer management
+3. Contact - contact display and functionality
+4. Reservations - reservations enquiries & customer management
 
 ### Databases
 
@@ -86,7 +87,20 @@ Entity Relationship Diagram below to see how the models relate to each other:
 ![Database Schemas can be found here](assets/images/database_schemas.jpg)
 
 ### Skeleton
-[Wireframes can be viewed here](assets/documents/grow-wireframes.pdf)
+Home Page:
+![Home Page Wireframe](assets/images/home-page.png "Home Page Wireframe")
+
+Menus Page:
+![Menus Page Wireframe](assets/images/menus.png "Menus Page Wireframe")
+
+Food/Drinks Page:
+![Food/Drinks Page Wireframe](assets/images/food%3Adrinks.png "Food and Drinks Page Wireframe")
+
+Contact Page:
+![Contact Us Page Wireframe](assets/images/contact.png "Contact Us Page Wireframe")
+
+Reservations Page:
+![Reservations Page Wireframe](assets/images/contact.png "Reservations Page Wireframe")
 
 Please note the actual website differs slightly from the original wireframes. 
 
