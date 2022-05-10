@@ -234,8 +234,6 @@ I have used several technologies that have enabled this design to work:
     - Used to store all of my static files and images.
 - [Favicon.io](https://favicon.io/)
     - Used to create favicon's for my website
-- [Color Contrast Accessibility Validator](https://color.a11y.com/)
-    - Allowed me to test the colour contrast of my webpage.
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate all HTML code written and used in this webpage.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)

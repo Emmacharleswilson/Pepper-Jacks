@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-8">
-                        <h2 class="text-center mt-2 mb-3 about-main">Welcome to Pepper Jack's</span>
+                        <h2 class="text-center mt-2 mb-3 about-main">Welcome to Pepper Jack's
                         </h2>
                         <p class="text-center mb-5 about-text">Located in an Art Deco room overlooking Regent Street,
                             the menu at Pepper Jack's Air Street is equally-weighted between steak and seafood. We have
@@ -30,30 +30,29 @@
                             of Air Street between Piccadilly and Regent Street.</p>
                     </div>
                 </div>
-
             </div>
-            <!-- Menus & Reservation images and page links -->
-            <div class="row content justify-content-center" style="margin-top: -80px; margin-bottom: 90px;">
-                <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
-                    <div>
-                        <a href="{% url 'menus' %}">
-                            <h3 class="mt-2 brand-text page-links">Menus</h3>
-                            <img src="{% static 'images/menu.jpg' %}" class="img-thumbnail"
-                                alt="A bowl of healthy food.">
-                        </a>
-                    </div>
+        </div>
+        <!-- Menus & Reservation images and page links -->
+        <div class="row content justify-content-center" style="margin-top: -80px; margin-bottom: 90px;">
+            <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
+                <div>
+                    <a href="{% url 'menus' %}">
+                        <h3 class="mt-2 brand-text page-links">Menus</h3>
+                        <img src="{% static 'images/menu.jpg' %}" class="img-thumbnail" alt="A bowl of healthy food.">
+                    </a>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
-                    <div>
-                        <a href="{% url 'reservations' %}">
-                            <h3 class="mt-2 brand-text page-links">Reservations</h3>
-                            <img src="{% static 'images/reservations.webp' %}" class="img-thumbnail"
-                                alt="A bowl of healthy food.">
-                        </a>
-                    </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 text-center">
+                <div>
+                    <a href="{% url 'reservations' %}">
+                        <h3 class="mt-2 brand-text page-links">Reservations</h3>
+                        <img src="{% static 'images/reservations.webp' %}" class="img-thumbnail"
+                            alt="A bowl of healthy food.">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    {% endblock %}
+{% endblock %}
