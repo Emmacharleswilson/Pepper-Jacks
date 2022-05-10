@@ -107,40 +107,36 @@ Please note the actual website differs slightly from the original wireframes.
 The theme of simplicity follows through to the design, I've used bootstrap columns and rows to divide the pages and tried to keep the same layout throughout so that the user has a sense of ease when on the various pages.
 
 ### Surface
-Initially, the colour palette I chose for this website was green and white. I wanted a 'clean' feel and based it on greens to keep in theme with Grow, nature plays a huge role in the design of the restaurant and the menu so I wanted there to be consistency. However, whilst building the website I felt the sole use of green made it feel a little flat so I chose to add pink to the colour scheme. This change between pink and green features often, on button hover, in the navbar & footer & menu headings. 
+Initially, the colour palette I chose for this website was Red, Maroon, Ecru and Green. I felt that these colours complimented eachother well and were consistant with the theme of the resturant. When designing the website I felt that some of these colours were a bit bold so for certain features the colours have been dulled. 
 
-![Colour Palette](assets/images/colour_palete.png)
+![Colour Palette](assets/images/colour-pallete.png)
 
-I chose the fonts 'Lobster' & 'Raleway', I wanted a bold/statement font to use for headings which is why I chose 'Lobster' and then 'Raleway' for the general content as it's easier to read for the user. I have used a class called `brand-text` for most instances of the word Grow and also for the menu and footer headings.
+I chose the fonts 'Abril Fatface' & 'Akshar', I wanted a bold/statement font to use for headings which is why I chose 'Abril Fatface' and then 'Akshar' for the general content as it's easier to read for the user. 
 
 ---
 ## Features
 
 ### Home page
-**Navigation bar**: The navigation bar has links to all the active pages for the user and are clearly labelled, the menus option has a dropdown link to take the user to the Food or Drink menu. The page that the user is on has an 'active' style, the background changes to white and the text turns green to indicate to the user which page they're on. The same style change also happens when a nav link is hovered on to again clearly indicate to the user what they are about to click on. 
+**Navigation bar**: The navigation bar has links to all the active pages for the user and are clearly labelled, the menus option has a dropdown link to take the user to the Food or Drink menu. The page that the user is on has an 'active' style, the text changes to red to indicate to the user which page they're on and when hovered over the text changes to green. The same style change also happens when a nav link is hovered on to again clearly indicate to the user what they are about to click on. 
 
 If the user is logged in then the right side of the menu shows links for pages that only authorised users can visit & use, they are: 'Manage Reservations', 'Update Details' & 'Logout'. Otherwise, the user will be given the option to 'Register' or 'Login'. This change in the menu ensures users are directed to pages they can use, preventing any frustration and also prompting the user to sign up for an account. Furthermore, it makes it abundantly clear what the logged-in status is to the user. 
 
 ![](assets/images/index_1.jpg)
 
-The navigation bar is fully responsive and collapses on mobile screens to a hamburger icon, this easily allows the user to continue to use the navigation links without the need to press back on the browser. 
+The navigation bar is fully responsive and collapses on mobile screens to a menu icon, this easily allows the user to continue to use the navigation links without the need to press back on the browser. 
 
 ![](assets/images/mobile_homepage.jpg)
 
-**Menus & Reservations images with links**: This image and title are both clickable and will take the user to the menus or reservations page. I have added a CSS rule that flips the image on hover & the title below also changes when it is hovered over, both have been implemented as a fun interaction for the user whilst giving a clear indication where they are on the page.
+**Menus & Reservations images with links**: This image and title are both clickable and will take the user to the menus or reservations page. 
 
 ![](assets/images/menus_res_links.jpg)
 
-**Footer**: The footer displays some of the restaurants key information and has links to social accounts. It is split into three sections, 'Opening Times', 'Find us! & 'Keep in touch', these sections have a pink background to make them stand out against the green.
+**Footer**: The footer displays some of the restaurants key information and has links to social accounts. 
 
 ![](assets/images/user_stories_testing/user_stories_footer.jpg)
 
- I felt that having all three sections displayed on a mobile screen made the footer too long so I chose to hide the map using a JavaScript function.
-
-![](assets/images/js_testing_images/footer_content_mobile.jpg)
-
 ### Menus
-**Menus page**: This page explains a little more about the menus in the restaurant, it has a link to each menu: Food or Drinks. These images and links have the same 'animation' on hover as the two links on the homepage, creating consistency in the users' interaction with the elements.
+**Menus page**: This page displays the menus in the restaurant, it has a link to each menu: Food or Drinks. 
 
 ![](assets/images/menus_page.jpg)
 
@@ -165,7 +161,7 @@ If the user is not logged in at all then the form appears blank, as the form req
 
 **Manage Reservations**: Logged in users are able to view the 'manage reservations' page, on this page they are shown any reservation enquiries they have previously made using the email address associated with their user account.
 
-The reservation ID is displayed at the top of the reservation item so they can be easily identified, the reservation status is also given a coloured background, depending on what the status is, to give the user a visual representation of this status.
+The reservation ID is displayed at the top of the reservation item so they can be easily identified.
 
 There are also edit & delete buttons, users are able to edit or delete existing reservations they have that are either 'confirmed' or 'pending'. 
 
@@ -191,20 +187,13 @@ Defensive programme has been used to prevent users editing/deleting reservations
 
 ![](assets/images/user_stories_testing/cancel_modal.jpg)
 
-**Update customer details**: A logged-in user can also update their phone number or full name that is stored in the customer model, this can be done from the 'Update Details' link in the navbar. This page simply displays the customer form but has the email address blanked out - this is because the email is associated with the user account and so I want the user to change their email for their account.
-
-There are explanation statements on this page regarding the email address as the user is only able to view reservations made under the users 'primary' email. I added this statement so that users were not surprised if they weren't able to view reservations made under an old email address. 
+**Update customer details**: A logged-in user can also update their phone number or full name that is stored in the customer model, this can be done from the 'Update Details' link in the navbar. This page simply displays the customer form but has the email address blanked out - this is to prevent users from changing the email address associated with their account.
 
 ![](assets/images/customer_details.jpg)
 
-If a user wants to update their email address they can navigate using the link found on 'Update Details'. They are taken to `accounts/email` and from here they can manage the emails associated with their user account. They can also switch their 'Primary' email to view reservations associated with their other email.
-
-![](assets/images/email_page.jpg)
 
 ### Contact Form
 **Contact form**: All users are able to submit a contact form from the 'Contact Us' page, this sends an email to the website owner using Google SMTP. Having a way to communicate with the website owner/restaurant manager is a helpful tool for the user and creates a platform for communication to strengthen the relationships with customers.
-
-This form also pre-populates with the customer's information if they're logged in.
 
 ![](assets/images/contact_form_user.jpg)
 
@@ -239,8 +228,6 @@ I have used several technologies that have enabled this design to work:
     - Used to test my code for any issues or errors.
 - [Grammarly](https://www.grammarly.com/)
     - Used to fix the grammar errors across the project.
-- [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB)
-    - Used to detect overflow of elements, which allowed me to quickly debug any issues.
 - [Coloors](https://coolors.co/)
     - Used to create a colour palette for the design.
 - [Cloudinary](https://cloudinary.com/)
@@ -263,15 +250,13 @@ I have used several technologies that have enabled this design to work:
     - Used to generate responsive image used in README file.
 - [Wave](https://wave.webaim.org/)
     - Used to test the accessibility of the website.
-- [Animate](https://animate.style/)
-    - Used to animate main heading and forms. 
 - [SQLite](https://www.sqlite.org/index.html)
     - I have SQLite to run my database tests locally.
 - [PostgreSQL](https://www.postgresql.org/)
     - I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
 ---
 ## Testing
-I have used a combination of manual and automated testing to ensure the website's functionality meets the desired intent.
+I have chosen to manually test my website.
 
 ### Code Validation
 All of my code has been validated using an online validator specific to the language, all code now passes with zero errors. 
@@ -312,17 +297,6 @@ My initial wave report had multiple contrast errors and so I had to alter my des
 I have tested this project manually myself and have also had it peer-reviewed & tested by friends and family on multiple devices and screen sizes.
 
 [TESTING.md](TESTING.md)
-
-### Automated Testing
-
-I have used the Coverage library throughout testing to keep track of how much of my Python code was covered by the tests I had written. From running the coverage report my website has 64% of my code tested. The remaining code is covered by manual testing.
-
-To generate your own coverage report from the command line:
-
-1. Install the package using `pip3 install coverage`
-2. Run `coverage run manage.py test`
-3. Then `coverage html` to generate the report
-4. You can view the report in a browser by using the command `python3 -m http.server` and opening the `index.html` file from inside the `htmlcov` folder.
 
 ### Bugs and Fixes
 
@@ -401,13 +375,13 @@ Throughout the process of building this website, I have used various sources onl
 
 [Full-width pic header](https://startbootstrap.com/template/full-width-pics)
 
+[Footer](https://getbootstrap.com/docs/5.1/examples/footers/)
+
 [Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
 
-[To display multiple queryset](https://stackoverflow.com/questions/48872380/display-multiple-queryset-in-list-view)
+[Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
 
 [Django phone number](https://github.com/stefanfoulis/django-phonenumber-field)
-
-[Coverage](https://coverage.readthedocs.io/en/6.2/)
 
 [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 
@@ -417,15 +391,9 @@ Throughout the process of building this website, I have used various sources onl
 
 [Updating form](https://stackoverflow.com/questions/42217334/django-get-data-and-edit-in-the-same-form-edit-in-one-place)
 
-[Debounce](https://davidwalsh.name/javascript-debounce-function)
+[Menus](https://github.com/daisygunn/grow-restaurant/tree/main/menus)
 
-[Animate](https://animate.style/)
-
-[Testing](https://www.youtube.com/watch?v=0MrgsYswT1c)
-
-[Unsplash for images](https://unsplash.com/@daisygunn94/likes)
-
-[404 page template](https://colorlib.com/wp/template/colorlib-error-404-15/)
+I have used Daisy Gunn's Grow resturant project as a guideline when creating the reservations app and for general guidance throughout (https://github.com/daisygunn/grow-restaurant)
 
 ---
 ## Acknowledgements

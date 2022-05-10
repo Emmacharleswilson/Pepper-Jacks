@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
+from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.conf import settings
@@ -26,6 +27,10 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             send_message(request, form)
+
+        messages.add_message(
+                    request, messages.SUCCESS,
+                    f"Thank you, your message has been sent.")
 
     form = ContactForm()
     return render(request, "contact.html", {'form': form})
