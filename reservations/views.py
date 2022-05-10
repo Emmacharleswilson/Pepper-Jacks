@@ -154,7 +154,8 @@ class ReservationsEnquiry(View):
 
 
 class ManageReservations(View):
-    """ Manage Reservations view allows customer to maanage any existing enquiries """
+    """ Manage Reservations view allows customer to maanage
+    any existing enquiries """
     def get(self, request, *args, **kwargs):
 
         if request.user.is_authenticated:
@@ -173,7 +174,8 @@ class ManageReservations(View):
                 validate_date(self, request, current_reservations)
                 return render(
                     request, 'manage_reservations.html',
-                    {'reservations': current_reservations, 'customer': customer})
+                    {'reservations': current_reservations,
+                     'customer': customer})
 
         else:
             """ Prevent customer not logged in from accessing this page """

@@ -255,34 +255,18 @@ All of my code has been validated using an online validator specific to the lang
 
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate all HTML code written and used in this webpage.
+    - This passes with minor errors
 
-![](assets/images/html_report.jpg)
+![](assets/images/html_report.png)
 
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Used to validate all CSS code written and used in this webpage.
 
-![](assets/images/css_validation.jpg)
-
-- [JSHint](https://jshint.com/)
-    - Used to validate JS code
+![](assets/images/css_report.png)
 
 - [Pep8](http://pep8online.com/)
     - Used to test my code for any issues or errors.
 
-In addition to this I have also used online validators to test the accessibility of my website:
-- [Wave](https://wave.webaim.org/)
-    - Used to test the accessibility of the website.
-
-![](assets/images/wave_report.jpg)
-
-My initial wave report had multiple contrast errors and so I had to alter my design, the pink used for active/hover nav links were changed to white and I enlarged the font size in my footer. However, one contrast error is still showing in the footer. I am unable to find the reason for this error and have chosen to leave the element as it is, the reason for this is due to the fact it is visually the same as the other elements surrounding it and they do not have a contrast error. 
-
-![](assets/images/contrast_error.jpg)
-
-- [Color Contrast Accessibility Validator](https://color.a11y.com/)
-    - Allowed me to test the colour contrast of my webpage.
-
-![](assets/images/contrast_report.jpg)
 
 ### Manual Testing
 
