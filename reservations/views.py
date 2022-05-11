@@ -267,7 +267,7 @@ class EditReservation(View):
             reservation.status = 'pending'
             reservation_form.save(commit=False)
             reservation_form.save()
-            messages.info(request,f"Reservation {reservation_id} has now"
+            messages.info(request, f"Reservation {reservation_id} has now"
             " been updated.")
             # Retreive new list of reservations to display
             current_reservations = retrieve_reservations(
@@ -307,23 +307,11 @@ class DeleteReservation(View):
                 url = reverse('manage_reservations')
                 return HttpResponseRedirect(url)
             else:
-                # Compare names of reservation owner and user
-                reservation_owner = reservation.customer
-                name_of_user = customer
-
-                if reservation_owner != name_of_user:
-                    # If the names do not match redirect to manage reservations
-                    messages.add_message(request, messages.ERROR,
-                                         "You are trying to cancel a "
-                                         "reservation that is not yours.")
-                    url = reverse('manage_reservations')
-                    return HttpResponseRedirect(url)
-
-                else:
-                    return render(request, 'delete_reservation.html',
-                                  {'customer': customer,
-                                   'reservation': reservation,
-                                   'reservation_id': reservation_id})
+                # Delete customers reservation
+                return render(request, 'delete_reservation.html',
+                                {'customer': customer,
+                                'reservation': reservation,
+                                'reservation_id': reservation_id})
         else:
             # Prevent users not logged in from accessing this page
             messages.add_message(
@@ -423,13 +411,3 @@ class EditCustomerDetails(View):
         return render(request, 'edit_customer_details.html',
                       {'customer_form': customer_form,
                        'customer': customer, })
-
-
-"""
-def reservations(request):
-    items = Item.objects.all()
-    context = {
-        'items': items
-    }
-    return render(request, 'reservations.html', context)
-"""
