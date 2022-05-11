@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 import datetime
-from .models import Item, Table, Customer, Reservation
+from .models import Table, Customer, Reservation
 from .forms import CustomerForm, ReservationForm
 
 

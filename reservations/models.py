@@ -9,11 +9,6 @@ status_choices = (("pending", "pending"),
 
 
 time_choices = (
-    ("07:00", "07:00"),
-    ("08:00", "08:00"),
-    ("09:00", "09:00"),
-    ("10:00", "10:00"),
-    ("11:00", "11:00"),
     ("12:00", "12:00"),
     ("13:00", "13:00"),
     ("14:00", "14:00"),
@@ -24,6 +19,7 @@ time_choices = (
     ("19:00", "19:00"),
     ("20:00", "20:00"),
     ("21:00", "21:00"),
+    ("22:00", "22:00"),
     )
 
 
@@ -36,15 +32,6 @@ guests_choices = ((1, "1 person"),
 
 
 # Create your models here
-class Item(models.Model):
-    name = models.CharField(max_length=50, null=False, blank=False)
-    done = models.BooleanField(null=False, blank=False, default=False)
-
-    def __str__(self):
-        # return the full name as this is easier for the admin to read
-        return self.name
-
-
 class Customer(models.Model):
     customer_id = models.AutoField(primary_key=True)
     full_name = models.CharField(max_length=50)
