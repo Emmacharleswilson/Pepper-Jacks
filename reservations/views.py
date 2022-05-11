@@ -9,7 +9,7 @@ from .forms import CustomerForm, ReservationForm
 
 
 def get_customer_instance(request, User):
-    """ Returns customer instance if User logged in """
+    """ Returns customer details if logged in """
     customer_email = request.user.email
     customer = Customer.objects.filter(email=customer_email).first()
 
@@ -17,8 +17,8 @@ def get_customer_instance(request, User):
 
 
 def retrieve_reservations(self, request, User):
-    """ Get any existing reservations for the customer in the
-    Reservationbs model. If there are no reservations then redirect
+    """ Get any existing reservations for the customer from the
+    Reservations model. If there are no reservations then redirect
     customer to Reservations page """
     customer_email = request.user.email
     if len(Customer.objects.filter(email=customer_email)) != 0:
@@ -46,26 +46,7 @@ def validate_date(self, request, reservations):
             reservation['status'] = 'expired'
 
         return reservations
-
-
-def check_availabilty(customer_requested_time, customer_requested_date):
-    """ check availability against Reservation model using customer input """
-
-    # Check to see how many bookings exist at that time/date
-    no_tables_booked = len(Reservation.objects.filter(
-        requested_time=customer_requested_time,
-        requested_date=customer_requested_date, status="confirmed"))
-
-    # Return number of tables
-    return no_tables_booked
-
-
-def get_tables_info():
-    """ Retrieves the number of tables in the table model """
-    max_tables = len(Table.objects.all())
-
-    return
-
+        
 
 # Create your views here.
 class ReservationsEnquiry(View):

@@ -33,27 +33,31 @@ guests_choices = ((1, "1 person"),
 
 # Create your models here
 class Customer(models.Model):
+    """ Customer model """
     customer_id = models.AutoField(primary_key=True)
     full_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=254, default="")
     phone_number = PhoneNumberField(null=True)
 
     def __str__(self):
-        # return the full name as this is easier for the admin to read
+        # return the full name for admin to read
         return self.full_name
 
 
 class Table(models.Model):
+    """ Table model """
     table_id = models.AutoField(primary_key=True)
     table_name = models.CharField(
         max_length=10, default="New table", unique=True)
     max_no_people = models.IntegerField()
 
     def __str__(self):
+        # return the table for admin to read
         return self.table_name
 
 
 class Reservation(models.Model):
+    """ Reservation model """
     reservation_id = models.AutoField(primary_key=True)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="customer", null=True)
     no_of_guests = models.IntegerField(choices=guests_choices, default=1)
@@ -65,4 +69,5 @@ class Reservation(models.Model):
         max_length=10, choices=status_choices, default="pending")
 
     def __str__(self):
+        # return the reservation id for admin to read
         return str(self.reservation_id)
