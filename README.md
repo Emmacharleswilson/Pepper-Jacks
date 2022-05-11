@@ -2,7 +2,7 @@
 
 ![](assets/images/responsive.jpg)
 
-[Live application can be found here]()
+[Live application can be found here](https://pepper-jacks.herokuapp.com/)
 
 This is a full-stack framework project built using Django, Python, HTML, and CSS. This is a restaurant website designed to display menus to customers & allow them to make/edit/delete reservations. This project has been built for educational purposes.
 
@@ -27,7 +27,7 @@ These users will be looking for:
 This website will offer all of these things whilst also allowing for intuitive navigation and comfortability of use. 
 
 ## User Stories
-Please find all my defined user stories & their acceptance criteria [here]()
+Please find all my defined user stories & their acceptance criteria [here](https://github.com/Emmacharleswilson/Pepper-Jacks/projects/2)
 
 1. As a user I can navigate through the site so that I can view the desired content
 2. As an admin user I can log in so that I can access the site's backend
