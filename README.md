@@ -70,22 +70,6 @@ The website is made of four apps:
 
 ### Databases
 
-The menus and reservations app both require databases to store information so I have built 5 custom models. 
-
-#### Menus
-FoodItem & DrinkItem are the model names for the menus app, these are two standalone models that provide all of the information required to display the items as part of the restaurant's menu. Each item has a name, description, price, dietary & allergens. 
-
-#### Reservations
-There are 3 models in this app, Customer, Table & Reservation. The combination of these 3 models allow for customer details to be stored, reservation enquiries to be made & managed & also enable availability checks whilst the user is enquiring. 
-
-For each reservation, there will be a customer & table assigned to it. The customer is assigned during the enquiry process and the tables are assigned in the backend by the admin user. This works for users that are logged in and also those that aren't. Logged in users will have their details associated with the user email address as this is how they are located in the customer model.
-
-The tables model is also used to determine what the availability of the restaurant is like and this logic prevents bookings from being made if there are no tables available at the specified date and time.
-
-Entity Relationship Diagram below to see how the models relate to each other: 
-
-![Database Schemas can be found here](assets/images/database_schemas.jpg)
-
 ### Skeleton
 Home Page:
 ![Home Page Wireframe](assets/images/home-page.png "Home Page Wireframe")
@@ -121,24 +105,23 @@ I chose the fonts 'Abril Fatface' & 'Akshar', I wanted a bold/statement font to 
 
 If the user is logged in then the right side of the menu shows links for pages that only authorised users can visit & use, they are: 'Manage Reservations', 'Update Details' & 'Logout'. Otherwise, the user will be given the option to 'Register' or 'Login'. This change in the menu ensures users are directed to pages they can use, preventing any frustration and also prompting the user to sign up for an account. Furthermore, it makes it abundantly clear what the logged-in status is to the user. 
 
-![](assets/images/index_1.jpg)
+![](assets/images/home-screen.png)
 
 The navigation bar is fully responsive and collapses on mobile screens to a menu icon, this easily allows the user to continue to use the navigation links without the need to press back on the browser. 
 
-![](assets/images/mobile_homepage.jpg)
+![](assets/images/mobile-hp.png)
 
 **Menus & Reservations images with links**: This image and title are both clickable and will take the user to the menus or reservations page. 
 
-![](assets/images/menus_res_links.jpg)
+![](assets/images/menus-hp.png)
 
 **Footer**: The footer displays some of the restaurants key information and has links to social accounts. 
 
-![](assets/images/user_stories_testing/user_stories_footer.jpg)
 
 ### Menus
 **Menus page**: This page displays the menus in the restaurant, it has a link to each menu: Food or Drinks. 
 
-![](assets/images/menus_page.jpg)
+![](assets/images/menus-fd.png)
 
 **Food & Drinks menus**: Each page displays all sections of the menus separately, each menu item has the Dish/Drink name, dish/drink description, price, dietary information & any allergens. The menus are controlled by the admin user, if 'on menu' is selected in the admin panel then the item will be displayed.
 
@@ -151,13 +134,13 @@ I have chosen to display the menus on different pages so that the user is able t
 
 If the user is logged in and they exist in the customer model then their name & email address are pre-populated, this has been done in an effort to improve their overall experience.
 
-![](assets/images/user_stories_testing/pre_populated_form.jpg)
+![](assets/images/reservation_prepop.png)
 
 If they are not yet in the customer model then only their email address is added using the email from their user account.
 
 If the user is not logged in at all then the form appears blank, as the form requires the phone number to be entered in the +44 format I have added this placeholder to the phone number input field to try and help the user.
 
-![](assets/images/user_stories_testing/blank_res_form.jpg)
+![](assets/images/reservations_blank.png)
 
 **Manage Reservations**: Logged in users are able to view the 'manage reservations' page, on this page they are shown any reservation enquiries they have previously made using the email address associated with their user account.
 
@@ -165,7 +148,7 @@ The reservation ID is displayed at the top of the reservation item so they can b
 
 There are also edit & delete buttons, users are able to edit or delete existing reservations they have that are either 'confirmed' or 'pending'. 
 
-![](assets/images/user_stories_testing/manage_reservations.jpg)
+![](assets/images//manage_reservations.png)
 
 I decided that reservations with a date in the past would display with a status of 'expired' and would not be able to be edited or deleted as this could cause confusion for the user and also the admin user, therefore the edit & delete buttons do not display under these reservations. Reservations with a 'rejected' status can also not be changed for the same reasons. 
 
@@ -179,23 +162,23 @@ Defensive programme has been used to prevent users editing/deleting reservations
 
 **Edit Reservation**: This page simply displays the reservation form pre-populated using the reservation instance, the user is able to change the date, time or number of guests and resubmit the form. After resubmitting the user is redirected back to the 'Manage Reservations' page and a success message is displayed showing which reservation was edited. 
 
-![](assets/images/user_stories_testing/reservation_message.jpg)
+![](assets/images/edit-restervation.png)
 
 **Delete Reservations**: This page simply displays the reservation selected with all of its information, the user presses 'Cancel Reservation' and a modal pop's up for the user to confirm the cancellation, explaining that this cannot be undone. If the user chooses 'Cancel it' the reservation will be deleted from the model. After confirming the user is redirected back to the 'Manage Reservations' page and a success message is displayed showing which reservation was edited. 
 
-![](assets/images/user_stories_testing/cancel_reservation.jpg) 
+![](assets/images/cancel-reservation.png) 
 
-![](assets/images/user_stories_testing/cancel_modal.jpg)
+![](assets/images/cancel-reservation-message.png)
 
-**Update customer details**: A logged-in user can also update their phone number or full name that is stored in the customer model, this can be done from the 'Update Details' link in the navbar. This page simply displays the customer form but has the email address blanked out - this is to prevent users from changing the email address associated with their account.
+**Update customer details**: A logged-in user can also update their phone number or full name that is stored in the customer model, this can be done from the 'Update Details' link in the navbar. This page simply displays the customer form but in future I would have liked to have added a feature that enables the user from editing the email field as this can cause problems with the customer model. 
 
-![](assets/images/customer_details.jpg)
+![](assets/images/edit-details.png)
 
 
 ### Contact Form
 **Contact form**: All users are able to submit a contact form from the 'Contact Us' page, this sends an email to the website owner using Google SMTP. Having a way to communicate with the website owner/restaurant manager is a helpful tool for the user and creates a platform for communication to strengthen the relationships with customers.
 
-![](assets/images/contact_form_user.jpg)
+![](assets/images/contact-form.png)
 
 ---
 ## Technologies Used
