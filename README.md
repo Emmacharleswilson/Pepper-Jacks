@@ -61,7 +61,7 @@ In order to achieve the desired user & business goals, the following features wi
 ## Structure
 This website has been designed with simplicity in mind, each page only has key information on it so that the user can find what they want quickly without having to read through unnecessary things. I have separated each key feature to highlight its functionality to the user.
 
-The website is made of three apps:
+The website is made of four apps:
 
 1. Home - home display and fucntionality
 2. Menus - menu display
