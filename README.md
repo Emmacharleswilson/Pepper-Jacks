@@ -115,8 +115,9 @@ The navigation bar is fully responsive and collapses on mobile screens to a menu
 
 ![](assets/images/menus-hp.png)
 
-**Footer**: The footer displays some of the restaurants key information and has links to social accounts. 
+**Footer**: The footer displays links to social accounts. 
 
+![](assets/images/footer.png)
 
 ### Menus
 **Menus page**: This page displays the menus in the restaurant, it has a link to each menu: Food or Drinks. 
@@ -127,7 +128,7 @@ The navigation bar is fully responsive and collapses on mobile screens to a menu
 
 I have chosen to display the menus on different pages so that the user is able to find the information they want as easily as possible, this separation prevents information overload as the pages aren't full of multiple menus.
 
-![](assets/images/user_stories_testing/food_menu.jpg) ![](assets/images/user_stories_testing/drinks_menu.jpg)
+![](assets/images/food.png) ![](assets/images/drinks.png)
 
 ### Reservations
 **Reservation form**: This page consists of the customer & reservation model forms, they are displayed together to appear as one to make it simple for the user.
@@ -156,9 +157,9 @@ The status of 'expired' doesn't get pushed to the model and is used only when di
 
 Defensive programme has been used to prevent users editing/deleting reservations that they aren't meant to, if a user tried (by adding the reservation ID in the URL) they would be redirected back to manage reservations.
 
-![](assets/images/edit_expired.jpg)
+![](assets/images/expired-reservation.png)
 
-![](assets/images/edit_rejected.jpg)
+![](assets/images/rejected.png)
 
 **Edit Reservation**: This page simply displays the reservation form pre-populated using the reservation instance, the user is able to change the date, time or number of guests and resubmit the form. After resubmitting the user is redirected back to the 'Manage Reservations' page and a success message is displayed showing which reservation was edited. 
 
@@ -351,6 +352,9 @@ Throughout the process of building this website, I have used various sources onl
 [Updating form](https://stackoverflow.com/questions/42217334/django-get-data-and-edit-in-the-same-form-edit-in-one-place)
 
 [Menus](https://github.com/daisygunn/grow-restaurant/tree/main/menus)
+
+[Home page about text](https://thehawksmoor.com/locations/airstreet/)
+
 
 I have used Daisy Gunn's Grow resturant project as a guideline when creating the reservations app and for general guidance throughout (https://github.com/daisygunn/grow-restaurant)
 

@@ -25,3 +25,4 @@ urlpatterns = [
     path('contact/', include('contact.urls'), name='contact_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+

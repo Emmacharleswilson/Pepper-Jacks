@@ -250,13 +250,6 @@ class EditReservation(View):
             date_formatted = datetime.datetime.strptime(
                 customer_requested_date, "%d/%m/%Y").strftime('%Y-%m-%d')
 
-            # Check the amount of tables already booked at that date and time
-            tables_booked = check_availabilty(
-                customer_requested_time, date_formatted)
-
-            # Get total number of tables in restaurant
-            max_tables = get_tables_info()
-
             # Update the existing reservation with the form data.
             reservation.reservation_id = reservation_id
             reservation.requested_time = customer_requested_time

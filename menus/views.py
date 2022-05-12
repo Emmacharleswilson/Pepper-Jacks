@@ -49,3 +49,4 @@ class DrinksMenu(generic.ListView):
                 on_menu=True, drinks_menu_section=2)
         }
         return queryset
+
