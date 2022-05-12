@@ -256,9 +256,14 @@ All of my code has been validated using an online validator specific to the lang
 
 I have tested this project manually myself and have also had it peer-reviewed & tested by friends and family on multiple devices and screen sizes.
 
-[TESTING.md](TESTING.md)
+### Bugs, Fixes and Improvements 
 
-### Bugs and Fixes
+I have no known bugs however there are some aspects of UX and functionality that I would have liked to improve. 
+
+- First being the date field on the reservation form. There is no drop down calender or text that prompts the user on what format they should enter the date. This could be confusing and not be a very good user experience.
+- Secondly I think the colour scheme could be changed a little. Some of the colours against their chosen backgrounds could be hard to read. 
+- The email field on the Update Details page should not be edited. I would have liked to have greyed that field out so that it was readonly. 
+- Lastly I would have liked to have provided some sort of functionality that prevents users from creating a booking that is in the past. Currently they can however the booking will be automatically expired. 
 
 
 ---
