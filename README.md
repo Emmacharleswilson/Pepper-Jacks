@@ -256,9 +256,16 @@ All of my code has been validated using an online validator specific to the lang
 
 I have tested this project manually myself and have also had it peer-reviewed & tested by friends and family on multiple devices and screen sizes.
 
-### Bugs, Fixes and Improvements 
+### Bugs, Fixes and Improvements
 
-I have no known bugs however there are some aspects of UX and functionality that I would have liked to improve. 
+#### Bugs
+
+[Footer] - The footer on mobile view cuts of some reservations if the user has made more than two bookings.
+         - This is an ongoing issue.
+
+#### Improvements
+
+There are some aspects of UX and functionality that I would have liked to improve. 
 
 - First being the date field on the reservation form. There is no drop down calender or text that prompts the user on what format they should enter the date. This could be confusing and not be a very good user experience.
 - Secondly I think the colour scheme could be changed a little. Some of the colours against their chosen backgrounds could be hard to read. 
@@ -361,10 +368,10 @@ Throughout the process of building this website, I have used various sources onl
 [Home page about text](https://thehawksmoor.com/locations/airstreet/)
 
 
-I have used Daisy Gunn's Grow resturant project as a guideline when creating the reservations app and for general guidance throughout (https://github.com/daisygunn/grow-restaurant)
+I have used Daisy Gunn's Grow resturant project as a guideline when creating the menus app and for general guidance throughout (https://github.com/daisygunn/grow-restaurant)
 
 ---
 ## Acknowledgements
 
-
+I would like to thank my course mentor Sandeep Aggarwal for his support and guidance throughout the course of the project and my peers Daisy Gunn and Harry Dhillon for their support & feedback.
 ---
