@@ -70,6 +70,12 @@ The website is made of four apps:
 
 ### Databases
 
+#### Reservations 
+This is made up of 3 models - Customer, Table and Reservation. The Customer model has customer id as a primary key along with name, email and phone number fields. The Table model has the table id as a primary key along with table name and the maximum number of people for the table. The Reservation model has reservation id as a primary key and holds the customer, number of guests, requested date, requested time, table id and the status of the booking. The reservation model also has customer and table as foreign keys.
+
+#### Menus 
+The menus are made up for two models - Food item and Drink item. Each item has an id as a primary key and name, description, price, dietary & allergens menu section, on menu and date/time updated fields.
+
 ### Skeleton
 Home Page:
 ![Home Page Wireframe](assets/images/home-page.png "Home Page Wireframe")
