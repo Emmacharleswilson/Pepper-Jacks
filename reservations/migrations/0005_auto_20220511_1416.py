@@ -6,16 +6,32 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('reservations', '0004_alter_reservation_no_of_guests'),
+        ("reservations", "0004_alter_reservation_no_of_guests"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='Item',
+            name="Item",
         ),
         migrations.AlterField(
-            model_name='reservation',
-            name='requested_time',
-            field=models.CharField(choices=[('12:00', '12:00'), ('13:00', '13:00'), ('14:00', '14:00'), ('15:00', '15:00'), ('16:00', '16:00'), ('17:00', '17:00'), ('18:00', '18:00'), ('19:00', '19:00'), ('20:00', '20:00'), ('21:00', '21:00'), ('22:00', '22:00')], default='12:00', max_length=10),
+            model_name="reservation",
+            name="requested_time",
+            field=models.CharField(
+                choices=[
+                    ("12:00", "12:00"),
+                    ("13:00", "13:00"),
+                    ("14:00", "14:00"),
+                    ("15:00", "15:00"),
+                    ("16:00", "16:00"),
+                    ("17:00", "17:00"),
+                    ("18:00", "18:00"),
+                    ("19:00", "19:00"),
+                    ("20:00", "20:00"),
+                    ("21:00", "21:00"),
+                    ("22:00", "22:00"),
+                ],
+                default="12:00",
+                max_length=10,
+            ),
         ),
     ]

@@ -7,36 +7,35 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='DrinkItem',
+            name="DrinkItem",
             fields=[
-                ('drink_id', models.AutoField(primary_key=True, serialize=False)),
-                ('drink_name', models.CharField(max_length=200, unique=True)),
-                ('description', models.CharField(max_length=200, unique=True)),
-                ('price', models.FloatField()),
-                ('allergens', models.CharField(max_length=200, null=True)),
-                ('on_menu', models.BooleanField(default=False)),
+                ("drink_id", models.AutoField(primary_key=True, serialize=False)),
+                ("drink_name", models.CharField(max_length=200, unique=True)),
+                ("description", models.CharField(max_length=200, unique=True)),
+                ("price", models.FloatField()),
+                ("allergens", models.CharField(max_length=200, null=True)),
+                ("on_menu", models.BooleanField(default=False)),
             ],
             options={
-                'ordering': ['-on_menu'],
+                "ordering": ["-on_menu"],
             },
         ),
         migrations.CreateModel(
-            name='FoodItem',
+            name="FoodItem",
             fields=[
-                ('dish_id', models.AutoField(primary_key=True, serialize=False)),
-                ('dish_name', models.CharField(max_length=200, unique=True)),
-                ('description', models.CharField(max_length=200, unique=True)),
-                ('price', models.FloatField()),
-                ('allergens', models.CharField(max_length=200, null=True)),
-                ('on_menu', models.BooleanField(default=True)),
+                ("dish_id", models.AutoField(primary_key=True, serialize=False)),
+                ("dish_name", models.CharField(max_length=200, unique=True)),
+                ("description", models.CharField(max_length=200, unique=True)),
+                ("price", models.FloatField()),
+                ("allergens", models.CharField(max_length=200, null=True)),
+                ("on_menu", models.BooleanField(default=True)),
             ],
             options={
-                'ordering': ['-on_menu'],
+                "ordering": ["-on_menu"],
             },
         ),
     ]

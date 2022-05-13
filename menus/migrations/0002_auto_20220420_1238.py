@@ -6,33 +6,44 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('menus', '0001_initial'),
+        ("menus", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='drinkitem',
-            name='drinks_menu_section',
-            field=models.IntegerField(choices=[(0, 'Hot Drinks'), (1, 'Fruit juices/Soft Drinks'), (2, 'Wine/Beer/Cocktails'), (3, 'New item')], default=3),
+            model_name="drinkitem",
+            name="drinks_menu_section",
+            field=models.IntegerField(
+                choices=[
+                    (0, "Hot Drinks"),
+                    (1, "Fruit juices/Soft Drinks"),
+                    (2, "Wine/Beer/Cocktails"),
+                    (3, "New item"),
+                ],
+                default=3,
+            ),
         ),
         migrations.AddField(
-            model_name='drinkitem',
-            name='updated_on',
+            model_name="drinkitem",
+            name="updated_on",
             field=models.DateTimeField(auto_now=True),
         ),
         migrations.AddField(
-            model_name='fooditem',
-            name='food_menu_section',
-            field=models.IntegerField(choices=[(0, 'Breakfast/Brunch'), (1, 'Dinner'), (2, 'New item')], default=2),
+            model_name="fooditem",
+            name="food_menu_section",
+            field=models.IntegerField(
+                choices=[(0, "Breakfast/Brunch"), (1, "Dinner"), (2, "New item")],
+                default=2,
+            ),
         ),
         migrations.AddField(
-            model_name='fooditem',
-            name='updated_on',
+            model_name="fooditem",
+            name="updated_on",
             field=models.DateTimeField(auto_now=True),
         ),
         migrations.AlterField(
-            model_name='fooditem',
-            name='on_menu',
+            model_name="fooditem",
+            name="on_menu",
             field=models.BooleanField(default=False),
         ),
     ]

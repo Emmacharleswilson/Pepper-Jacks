@@ -5,12 +5,13 @@ from .models import Customer, Reservation
 
 
 class CustomerForm(forms.ModelForm):
-    phone_number = PhoneNumberField(widget=forms.TextInput(
-        attrs={'placeholder': ('Please enter in +44 format')}))
+    phone_number = PhoneNumberField(
+        widget=forms.TextInput(attrs={"placeholder": ("Please enter in +44 format")})
+    )
 
     class Meta:
         model = Customer
-        fields = ('full_name', 'email', 'phone_number')
+        fields = ("full_name", "email", "phone_number")
 
 
 class ReservationForm(forms.ModelForm):
@@ -18,4 +19,4 @@ class ReservationForm(forms.ModelForm):
 
     class Meta:
         model = Reservation
-        fields = ('no_of_guests', 'requested_date', 'requested_time')
+        fields = ("no_of_guests", "requested_date", "requested_time")

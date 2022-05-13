@@ -6,13 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('menus', '0003_alter_fooditem_food_menu_section'),
+        ("menus", "0003_alter_fooditem_food_menu_section"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='fooditem',
-            name='food_menu_section',
-            field=models.IntegerField(choices=[(0, 'Lunch'), (1, 'Dinner'), (2, 'Desserts'), (3, 'New item')], default=3),
+            model_name="fooditem",
+            name="food_menu_section",
+            field=models.IntegerField(
+                choices=[(0, "Lunch"), (1, "Dinner"), (2, "Desserts"), (3, "New item")],
+                default=3,
+            ),
         ),
     ]

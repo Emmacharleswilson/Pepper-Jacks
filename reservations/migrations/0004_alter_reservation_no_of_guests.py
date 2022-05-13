@@ -6,13 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('reservations', '0003_auto_20220506_1057'),
+        ("reservations", "0003_auto_20220506_1057"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='reservation',
-            name='no_of_guests',
-            field=models.IntegerField(choices=[(1, '1 person'), (2, '2 people'), (3, '3 people'), (4, '4 people'), (5, '5 people'), (6, '6 people')], default=1),
+            model_name="reservation",
+            name="no_of_guests",
+            field=models.IntegerField(
+                choices=[
+                    (1, "1 person"),
+                    (2, "2 people"),
+                    (3, "3 people"),
+                    (4, "4 people"),
+                    (5, "5 people"),
+                    (6, "6 people"),
+                ],
+                default=1,
+            ),
         ),
     ]

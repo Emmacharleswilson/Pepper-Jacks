@@ -2,10 +2,12 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
 
-status_choices = (("pending", "pending"),
-                  ("confirmed", "confirmed"),
-                  ("rejected", "rejected"),
-                  ("expired", "expired"))
+status_choices = (
+    ("pending", "pending"),
+    ("confirmed", "confirmed"),
+    ("rejected", "rejected"),
+    ("expired", "expired"),
+)
 
 
 time_choices = (
@@ -20,20 +22,23 @@ time_choices = (
     ("20:00", "20:00"),
     ("21:00", "21:00"),
     ("22:00", "22:00"),
-    )
+)
 
 
-guests_choices = ((1, "1 person"),
-                  (2, "2 people"),
-                  (3, "3 people"),
-                  (4, "4 people"),
-                  (5, "5 people"),
-                  (6, "6 people"),)
+guests_choices = (
+    (1, "1 person"),
+    (2, "2 people"),
+    (3, "3 people"),
+    (4, "4 people"),
+    (5, "5 people"),
+    (6, "6 people"),
+)
 
 
 # Create your models here
 class Customer(models.Model):
-    """ Customer model """
+    """Customer model"""
+
     customer_id = models.AutoField(primary_key=True)
     full_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=254, default="")
@@ -45,10 +50,10 @@ class Customer(models.Model):
 
 
 class Table(models.Model):
-    """ Table model """
+    """Table model"""
+
     table_id = models.AutoField(primary_key=True)
-    table_name = models.CharField(
-        max_length=10, default="New table", unique=True)
+    table_name = models.CharField(max_length=10, default="New table", unique=True)
     max_no_people = models.IntegerField()
 
     def __str__(self):
@@ -57,16 +62,21 @@ class Table(models.Model):
 
 
 class Reservation(models.Model):
-    """ Reservation model """
+    """Reservation model"""
+
     reservation_id = models.AutoField(primary_key=True)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="customer", null=True)
+    customer = models.ForeignKey(
+        Customer, on_delete=models.CASCADE, related_name="customer", null=True
+    )
     no_of_guests = models.IntegerField(choices=guests_choices, default=1)
     requested_date = models.DateField()
     requested_time = models.CharField(
-        max_length=10, choices=time_choices, default='12:00')
-    table = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="table_booked", null=True)
-    status = models.CharField(
-        max_length=10, choices=status_choices, default="pending")
+        max_length=10, choices=time_choices, default="12:00"
+    )
+    table = models.ForeignKey(
+        Table, on_delete=models.CASCADE, related_name="table_booked", null=True
+    )
+    status = models.CharField(max_length=10, choices=status_choices, default="pending")
 
     def __str__(self):
         # return the reservation id for admin to read
