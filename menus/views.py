@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.views import generic
 from .models import FoodItem, DrinkItem
 
+# Sourced from Diasy Gunn Grow Resturant
+
 
 def menus(request):
     return render(request, "menus_page.html")

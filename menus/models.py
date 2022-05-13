@@ -8,6 +8,7 @@ DRINKS_MENU_SECTION = (
     (3, "New item"),
 )
 
+# Sourced from Diasy Gunn Grow Resturant
 
 # Create your models here.
 class FoodItem(models.Model):
